@@ -17,7 +17,9 @@ button {
 }
 
 #canvas {
-    padding: 10% 10% 10% 10%;
+    padding: 3% 3% 3% 3%;
+    border: 15px solid purple;
+    background-color: lavender;
 }
 
 .square {
