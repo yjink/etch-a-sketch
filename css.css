@@ -1,0 +1,49 @@
+h1 {
+    font-family: arial;
+}
+
+button {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+#frame {
+    width: 400px;
+    height: 500px;
+    margin-left: 25%;
+    border: 3px solid #101010;
+    background-color: #202020;
+}
+
+#canvas {
+    padding: 10% 10% 10% 10%;
+}
+
+.square {
+    position: relative;
+    display: inline-grid;
+    border: 1px solid coral;
+    border-collapse: collapse;
+    width: 20px; 
+    height: 20px;
+    margin: -4px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: white;
+}
+
+#color {
+    // needs to be aligned at the bottom;
+}
+
+.etch {
+    // needs to be aligned as far apart as possible
+    // use flexbox
+    width: 100px;
+    height: 25px;
+    margin: auto auto auto auto;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+}
+
