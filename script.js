@@ -47,8 +47,8 @@ function grid(row, col) {
     // square could be smaller?
     canvas.style.width = row * 22 + 'px';
     canvas.style.height = col * 22 + 'px';
-    frame.style.width = ((row * 22) * 1.25) + 'px';
-    frame.style.height = ((col * 22) * 1.25) + 100 + 'px';
+    //frame.style.width = ((row * 22) * 1.25) + 'px';
+    //frame.style.height = ((col * 22) * 1.25) + 100 + 'px';
     // too put buttons in^^
 }
 
