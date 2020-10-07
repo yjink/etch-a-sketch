@@ -36,6 +36,7 @@ function grid(row, col) {
         for (let j = 0; j < col; j++) {
             let square = document.createElement('div');
             square.className = 'square';
+            canvas.appendChild(square);
 
             square.addEventListener('mousemove', event => {
                 square.style.backgroundColor = 'yellow';
@@ -47,7 +48,7 @@ function grid(row, col) {
     canvas.style.width = row * 22 + 'px';
     canvas.style.height = col * 22 + 'px';
     frame.style.width = ((row * 22) * 1.25) + 'px';
-    frame.style.height = ((col * 22) * 1.25) + 'px';
+    frame.style.height = ((col * 22) * 1.25) + 100 + 'px';
     // too put buttons in^^
 }
 
