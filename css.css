@@ -9,45 +9,62 @@ button {
 }
 
 #frame {
-    width: 400px;
-    height: 500px;
+    width: 850px;
+    height: 525px;
     margin-left: 25%;
-    border: 3px solid #101010;
+    border: 5px outset brown;
+    border-radius: 15px;
+    background-color: red;
+}
+
+#border {
+    margin: 3% auto auto auto;
+    padding: auto;
+    border: 15px solid #101010;
+    border-radius: 15px;
     background-color: #202020;
+    width: 550px;
+    height: 320px;
 }
 
 #canvas {
-    padding: 3% 3% 3% 3%;
-    border: 15px solid red;
-    background-color: black;
-    width: 300px;
-    height: 350px;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    width: 550px;
+    height: 320px;
 }
 
 .square {
-    position: relative;
     display: inline-grid;
     border: 1px solid coral;
     border-collapse: collapse;
     width: 20px; 
     height: 20px;
-    margin: -4px 0px 0px 0px;
+    margin: auto;
     padding: 0px 0px 0px 0px;
-    background-color: white;
 }
 
 #color {
     // needs to be aligned at the bottom;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#wheel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
 }
 
 .etch {
-    // needs to be aligned as far apart as possible
-    // use flexbox
-    width: 100px;
-    height: 25px;
+    width: 90px;
+    height: 90px;
     margin: auto auto auto auto;
-    font-size: 16px;
+    border-radius: 700%;
+    font-size: 20px;
     color: white;
-    background-color: red;
+    background-color: black;
 }
 

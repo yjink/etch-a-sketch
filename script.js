@@ -6,16 +6,16 @@ let clearCanvas = document.querySelector("#clear");
 // the frame
 let frame = document.querySelector("#frame");
 let canvas = document.querySelector("#canvas");
-let col; // height;
-let row; // width;
+let row; // height;
+let col; // width;
 
 // New!
 newCanvas.addEventListener("click", () => {
-    row = prompt("What is x: ?");
-    col = prompt("What is y: ?");
+    row = prompt("How tall is this canvas?: ");
+    col = prompt("How side is this canvas?: ");
     // be friendlier
 
-    if (row < 30 && col < 30) {
+    if (row <= 30 && col <= 30) {
         grid(row, col);
     } else {
         alert("This canvas is too big!");
@@ -32,10 +32,17 @@ clearCanvas.addEventListener("click", () => {
 function grid(row, col) {
     clear();
 
+    
+    let h = 300 / row;
+    let w = 400 / col;
+
     for (let i = 0; i < row; i++) {
         for (let j = 0; j < col; j++) {
             let square = document.createElement('div');
             square.className = 'square';
+            square.style.height = h + 'px';
+            square.style.width = w + 'px';
+            // ^ trying to divide canvas into rows and cols;
             canvas.appendChild(square);
 
             square.addEventListener('mousemove', event => {
@@ -43,13 +50,6 @@ function grid(row, col) {
             })
         }
     }
-
-    // square could be smaller?
-    canvas.style.width = row * 22 + 'px';
-    canvas.style.height = col * 22 + 'px';
-    //frame.style.width = ((row * 22) * 1.25) + 'px';
-    //frame.style.height = ((col * 22) * 1.25) + 100 + 'px';
-    // too put buttons in^^
 }
 
 function clear() {
