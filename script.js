@@ -2,6 +2,11 @@
 let newCanvas = document.querySelector("#new");
 let clearCanvas = document.querySelector("#clear");
 // the color buttons
+let color = 'purple';
+
+function chooseColor(thisId) {
+    color = thisId;
+}
 
 // the frame
 let frame = document.querySelector("#frame");
@@ -11,44 +16,35 @@ let col; // width;
 
 // New!
 newCanvas.addEventListener("click", () => {
-    row = prompt("How tall is this canvas?: ");
-    col = prompt("How side is this canvas?: ");
-    // be friendlier
-
-    if (row <= 30 && col <= 30) {
-        grid(row, col);
-    } else {
-        alert("This canvas is too big!");
-    }
+    grid();
 });
 
 // Clear 
 clearCanvas.addEventListener("click", () => {
     clear();
-    grid(row, col);
+    grid();
 })
 
 // make grid
-function grid(row, col) {
+function grid() {
     clear();
 
-    
-    let h = 300 / row;
-    let w = 400 / col;
+    let h = Math.floor((320 / 17) * .93);
+    let w = Math.floor((550 / 17) * .93);
 
-    for (let i = 0; i < row; i++) {
-        for (let j = 0; j < col; j++) {
+    for (let i = 0; i < 17; i++) {
+        for (let j = 0; j < 17; j++) {
             let square = document.createElement('div');
             square.className = 'square';
             square.style.height = h + 'px';
             square.style.width = w + 'px';
-            // ^ trying to divide canvas into rows and cols;
             canvas.appendChild(square);
 
+
             square.addEventListener('mousemove', event => {
-                square.style.backgroundColor = 'yellow';
+                square.style.backgroundColor = color;
             })
-        }
+        }   
     }
 }
 
