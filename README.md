@@ -7,7 +7,7 @@
 - Need better math for canvas
 
 10/12/20
-- Completed 17 x 17
+- Completed 17 x 17 in index.html
 - Here is random code:
 
 
@@ -25,3 +25,5 @@
     //         })
     //     }
     // }
+
+- Create 
