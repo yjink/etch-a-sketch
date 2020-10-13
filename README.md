@@ -26,4 +26,7 @@
     //     }
     // }
 
-- Create 
+
+10/13/20
+- Updated random color generator
+- Updated fade option

@@ -1,9 +1,10 @@
 let canvas = document.querySelector('#canvas');
 let newCanvas = document.querySelector('#newCanvas');
 let clearCanvas = document.querySelector('#clearCanvas');
+let newColor = document.querySelector('#newColor');
 let row; // height
 let col; // width
-let color = 'black';
+let randomColor = 'yellow';
 
 newCanvas.addEventListener("click", () => {
     clearGrid(); 
@@ -11,7 +12,11 @@ newCanvas.addEventListener("click", () => {
     row = prompt("How tall is this grid?");
     col = prompt("How wide is this grid?"); 
 
-    makeGrid(row, col);
+    if (row <= 100 && col <= 100) {
+        makeGrid(row, col);
+    } else {
+        alert("This grid is too big!");
+    }
 })
 
 clearCanvas.addEventListener('click', event => {
@@ -23,6 +28,8 @@ function clearGrid() {
     while(canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
     }
+
+    opacity = 0.1;
 }
 
 function makeGrid(row, col) {
@@ -35,9 +42,22 @@ function makeGrid(row, col) {
             square.className = 'square';
             canvas.appendChild(square);
 
-            square.addEventListener('mousemove', event => {
-                square.style.backgroundColor = color;
+            square.addEventListener('mouseenter', event => {
+                square.style.backgroundColor = randomColor;
+                square.style.opacity = opacity;
+            })
+
+            square.addEventListener('mouseleave', event => {
+                opacity = opacity * 1.1;
             })
         }
     }
 }
+
+function getColor() {
+    randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+
+newColor.addEventListener('click', () => {
+    getColor();
+})
