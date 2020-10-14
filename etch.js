@@ -5,6 +5,7 @@ let newColor = document.querySelector('#newColor');
 let row; // height
 let col; // width
 let randomColor = 'yellow';
+let opacity;
 
 newCanvas.addEventListener("click", () => {
     clearGrid(); 
@@ -46,12 +47,13 @@ function makeGrid(row, col) {
                 square.style.backgroundColor = randomColor;
                 square.style.opacity = opacity;
             })
-
-            square.addEventListener('mouseleave', event => {
-                opacity = opacity * 1.1;
-            })
         }
     }
+
+    canvas.addEventListener('mouseleave', () => {
+        opacity = opacity + 0.1
+    })
+
 }
 
 function getColor() {
