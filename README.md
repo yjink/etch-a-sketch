@@ -30,3 +30,6 @@
 10/13/20
 - Updated random color generator
 - Updated fade option
+
+10/14/20
+- Fixed size square issue

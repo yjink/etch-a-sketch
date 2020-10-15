@@ -1,6 +1,17 @@
 h1 {
-    font-family: arial;
     text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+p {
+    font-family: "Courier New", Courier, monospace;
+}
+
+#head {
+    text-align: center;
+    width: 600px;
+    margin: auto auto auto auto;
+    padding: auto;
 }
 
 button {
@@ -10,59 +21,72 @@ button {
 }
 
 #frame {
+    line-height: 0px;
     width: 850px;
-    height: 525px;
-    margin-left: auto;
+    height: 700px;
+    margin: auto;
     border: 5px outset brown;
     border-radius: 15px;
     background-color: red;
 }
 
+#cursive {
+    text-align: center;
+    text-shadow: 1px 1px brown;
+    font-size: 25px;
+    font-family: Snell Roundhand, cursive;
+    color: goldenrod;
+}
+
 #border {
-    margin: 3% auto auto auto;
+    margin: 3% auto 1% auto;
     padding: auto;
     border: 15px solid #101010;
     border-radius: 15px;
     background-color: #404040;
-    width: 545px;
-    height: 325px;
+    width: 500px;
+    height: 500px;
 }
 
 #canvas {
-    display: block;
+    width:500px;
+    height:500px;
+    margin-top: auto;
     margin-left: auto;
-    margin-right: auto;
-    padding: auto;
 }
 
 .square {
     display: inline-block;
-    border: 1px solid #404040;
-    border-collapse: collapse;
-    height: 10px;
-    width: 10px;
-    padding: auto;
-    margin-top: -1px;
-    margin-left: auto;
-    margin-bottom: -5px;
-    margin-right: auto;
 }
 
 #color {
-    margin-top: 5px;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
 }
 
 #wheel {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0px;
+
 }
 
+
+#new {
+    position: relative;
+    left: 25px;
+    bottom: 35px;
+}
+
+#clear {
+    position: relative;
+    float: right;
+    right: 25px;
+    bottom: 35px;
+}
+
+
 .etch {
-    width: 90px;
-    height: 90px;
+    width: 115px;
+    height: 115px;
     margin: auto auto auto auto;
     border-radius: 700%;
     font-size: 20px;
@@ -70,3 +94,7 @@ button {
     background-color: black;
 }
 
+footer {
+    margin-top: 50px;
+    text-align: center;
+}

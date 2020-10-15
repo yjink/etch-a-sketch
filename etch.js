@@ -1,7 +1,7 @@
 let canvas = document.querySelector('#canvas');
 let newCanvas = document.querySelector('#newCanvas');
 let clearCanvas = document.querySelector('#clearCanvas');
-let newColor = document.querySelector('#newColor');
+let penColor = document.querySelector('#penColor');
 let row; // height
 let col; // width
 let randomColor = 'yellow';
@@ -60,6 +60,8 @@ function getColor() {
     randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
-newColor.addEventListener('click', () => {
-    getColor();
+penColor.addEventListener('click', () => {
+    canvas.addEventListener('mousemove', event => {
+        getColor();
+    })
 })

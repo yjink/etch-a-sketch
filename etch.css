@@ -1,5 +1,16 @@
 h1, h2, p {
     margin: 0px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+button {
+    margin: 15px 0px 15px 0px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+#frame {
+    margin: auto;
+    padding: auto;
 }
 
 #canvas {

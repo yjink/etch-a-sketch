@@ -5,21 +5,29 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
+    <div id="head">
+        <p> Per <a href="https://en.wikipedia.org/wiki/Etch_A_Sketch">Wikipedia</a>, etch-a-sketch is a mechanical drawing toy invented in France. It is a flat gray screen inside a red plastic frame. There are two knobs on the front of the frame in lower corners. Twisting these knobs moves a stylus that draws across the screen.
+        </p>
+    </div>
     <div id="frame">
+        <p id="cursive">Etch A Sketch</p>
         <div id="border">
             <div id="canvas"></div>
         </div>
         <div id="color">
-            <button id="purple" onClick="chooseColor(this.id)">Purple</button>
-            <button id="blue" onClick="chooseColor(this.id)">Blue</button>
-            <button id="yellow" onClick="chooseColor(this.id)">Yellow</button>
-            <button id="green" onClick="chooseColor(this.id)">Green</button>
+            <button id="white">White</button>
+            <button id="black">Black</button>
+            <button id="yellow">Yellow</button>
+            <button id="rand">Random</button>
         </div>
         <div id="wheel">
             <button class="etch" id="new">New!</button>
             <button class="etch" id="clear">Clear</button>
         </div>
     </div>
+    <footer>
+        <p>Made by Y. Jin K for the Odin Project</p>
+    </footer>
 </body>
 <script src="script.js">
     
