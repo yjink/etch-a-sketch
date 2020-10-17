@@ -33,3 +33,8 @@
 
 10/14/20
 - Fixed size square issue
+- Need to fix size square issue
+- Size 14 does not work
+
+10/16/20
+- Fixed size square issue for real

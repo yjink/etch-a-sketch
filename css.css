@@ -30,14 +30,6 @@ button {
     background-color: red;
 }
 
-#cursive {
-    text-align: center;
-    text-shadow: 1px 1px brown;
-    font-size: 25px;
-    font-family: Snell Roundhand, cursive;
-    color: goldenrod;
-}
-
 #border {
     margin: 3% auto 1% auto;
     padding: auto;
@@ -53,10 +45,13 @@ button {
     height:500px;
     margin-top: auto;
     margin-left: auto;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .square {
-    display: inline-block;
+    border: 1px dotted #303030;
 }
 
 #color {
@@ -64,11 +59,6 @@ button {
     display: flex;
     justify-content: center;
 }
-
-#wheel {
-
-}
-
 
 #new {
     position: relative;
