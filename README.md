@@ -38,3 +38,6 @@
 
 10/16/20
 - Fixed size square issue for real
+
+10/19/20
+- Clean up
