@@ -7,6 +7,10 @@ p {
     font-family: "Courier New", Courier, monospace;
 }
 
+a {
+    color: black;
+}
+
 #head {
     text-align: center;
     width: 600px;
@@ -28,6 +32,15 @@ button {
     border: 5px outset brown;
     border-radius: 15px;
     background-color: red;
+}
+
+#cursive {
+    text-align: center;
+    font-size: 30px;
+    color: goldenrod;
+    font-family: Snell Roundhand, cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px rgb(158, 116, 0);
 }
 
 #border {
