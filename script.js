@@ -1,5 +1,3 @@
-// Initializing...
-
 // Wheel buttons
 let newCanvas = document.querySelector("#new");
 let clearCanvas = document.querySelector("#clear");
@@ -12,13 +10,13 @@ let yellow = document.querySelector('#yellow');
 
 // Variables
 let opacity;
-let color = 'white';
+let brush = 'white';
 let canvas = document.querySelector("#canvas");
 
-let row = 0; // height;
-let col = 0; // width;
+let row = 16; // height;
+let col = 16; // width;
 
-// Make new canvas
+// Button to make new canvas
 newCanvas.addEventListener("click", () => {
     row = prompt("What size is this grid? (1-100)");
     col = row;
@@ -29,39 +27,27 @@ newCanvas.addEventListener("click", () => {
     }
 });
 
-// Clear the current canvas, keep size
+// Button to clear the current canvas, keep size
 clearCanvas.addEventListener("click", () => {
     clearGrid();
     makeGrid();
 })
 
-// Taste the rainbow
-
-function random(min, max) {
-    let num = Math.floor(Math.random() * (max - min));
-    return num;
+// Brush colors
+function getRandomColor() {
+    return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}`;
 }
-
-function randomColor() {
-    return 'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) + ')';
-}
-
-rand.addEventListener('click', () => {
-    color = randomColor();
-})
-
-
-
 white.addEventListener('click', () => {
-    color = 'white';
+    brush = 'white';
 })
-
 black.addEventListener('click', () => {
-    color = 'black';
+    brush = 'black';
 })
-
 yellow.addEventListener('click', () => {
-    color = 'yellow';
+    brush = 'yellow';
+})
+rand.addEventListener('click', () => {
+    brush = 'rand';
 })
 
 // Make grid
@@ -79,8 +65,17 @@ function makeGrid() {
             canvas.appendChild(square);
 
             square.addEventListener('mousemove', event => {
-                square.style.backgroundColor = color;
                 square.style.opacity = opacity;
+
+                if (brush == 'black') {
+                    square.style.backgroundColor = 'black';
+                } else if (brush == 'white') {
+                    square.style.backgroundColor = 'white';
+                } else if (brush == 'yellow') {
+                    square.style.backgroundColor = 'yellow';
+                } else if (brush == 'rand') {
+                    square.style.backgroundColor = getRandomColor();
+                }
             })
         }   
     }
@@ -90,6 +85,7 @@ function makeGrid() {
     })
 }
 
+// Clear Grid
 function clearGrid() {
     while(canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
@@ -98,7 +94,4 @@ function clearGrid() {
     color = 'white';
 }
 
-
-
-
-makeGrid(16, 16);
+makeGrid();
